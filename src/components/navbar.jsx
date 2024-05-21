@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../assets/Logo.png";
+import Logo from "../assets/Logo.png";
 import { CiSearch } from "react-icons/ci";
 import { IoCartOutline } from "react-icons/io5";
 import { IoMdArrowDropdown } from "react-icons/io";
@@ -119,7 +119,12 @@ const Navbar = () => {
               <ul>
                 {DropDownLinks.map((data) => (
                   <li key={data.id}>
-                    <a href={data.link}>{data.name}</a>
+                    <a
+                      className="inline-block w-full rounded-md p-2 hover:bg-primary hover:text-white"
+                      href={data.link}
+                    >
+                      {data.name}
+                    </a>
                   </li>
                 ))}
               </ul>
